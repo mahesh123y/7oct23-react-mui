@@ -9,20 +9,18 @@ import Blog from './pages/Blog';
 
 //2. Define Area
 
-function App() {
+function App(props) {
+  console.log(props.myclr)
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' index element={<Home myclr2 = {props.myclr} />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/blog' element={<Blog />} />
         </Routes>
       </BrowserRouter>
-
-
-
     </>
   );
 }
